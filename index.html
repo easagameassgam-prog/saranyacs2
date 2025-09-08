@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bio-Data - II B.Sc. CS</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Bio-Data Form</h1>
+    <form id="biodataForm" onsubmit="return showBioData();">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" required />
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required />
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" required />
+
+      <label for="address">Address:</label>
+      <textarea id="address" rows="3" required></textarea>
+
+      <label for="skills">Technical Skills:</label>
+      <input type="text" id="skills" placeholder="e.g., Java, Python" required />
+
+      <button type="submit">Generate Bio-Data</button>
+    </form>
+
+    <div id="output" class="biodata-output" style="display:none;">
+      <h2>Generated Bio-Data</h2>
+      <p><strong>Name:</strong> <span id="outName"></span></p>
+      <p><strong>Date of Birth:</strong> <span id="outDob"></span></p>
+      <p><strong>Email:</strong> <span id="outEmail"></span></p>
+      <p><strong>Phone:</strong> <span id="outPhone"></span></p>
+      <p><strong>Address:</strong> <span id="outAddress"></span></p>
+      <p><strong>Skills:</strong> <span id="outSkills"></span></p>
+    </div>
+  </div>
+
+  <script
